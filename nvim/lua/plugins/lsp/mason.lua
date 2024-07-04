@@ -23,6 +23,7 @@ return {
       ensure_installed = {
         "html",
         "htmx",
+        "templ",
         "cssls",
         "tailwindcss",
         "gopls",

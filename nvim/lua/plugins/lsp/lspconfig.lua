@@ -91,6 +91,35 @@ return {
           capabilities = capabilities,
         })
       end,
+      ["htmx"] = function()
+        -- configure graphql language server
+        lspconfig["htmx"].setup({
+          capabilities = capabilities,
+          filetypes = { "html", "templ", },
+        })
+      end,
+      ["html"] = function()
+        -- configure graphql language server
+        lspconfig["html"].setup({
+          capabilities = capabilities,
+          filetypes = { "html", "templ", },
+        })
+      end,
+      ["templ"] = function()
+        -- configure graphql language server
+        lspconfig["templ"].setup({
+          capabilities = capabilities,
+          filetypes = { "templ", },
+        })
+      end,
+      ["tailwindcss"] = function()
+        -- configure graphql language server
+        lspconfig["tailwindcss"].setup({
+          capabilities = capabilities,
+          filetypes = { "templ", "javascript", "html", "css" },
+          init_options = { userLanguages = { templ = "html" } },
+        })
+      end,
       ["lua_ls"] = function()
         -- configure lua server (with special settings)
         lspconfig["lua_ls"].setup({
