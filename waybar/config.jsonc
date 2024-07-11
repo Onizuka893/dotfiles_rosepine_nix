@@ -6,7 +6,7 @@
   // "width": 1280, // Waybar width
   "spacing": 0, // Gaps between modules (4px)
   // Choose the order of the modules
-  "modules-left": ["clock", "hyprland/workspaces"],
+  "modules-left": ["clock", "custom/prayerbar", "hyprland/workspaces"],
   "modules-center": [],
   "modules-right": [
     "memory",
@@ -45,6 +45,13 @@
       "locked": "",
       "unlocked": "",
     },
+  },
+  "custom/prayerbar": {
+    "format": "{}",
+    "tooltip": true,
+    "interval": 60,
+    "exec": "/home/rjuji/Projects/prayerbar/target/release/prayerbar --city Maasmechelen --country Belgium --method 15",
+    "return-type": "json",
   },
   "tray": {
     // "icon-size": 21,
@@ -95,7 +102,7 @@
     },
     "format": "{capacity}% {icon}",
     "format-full": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
+    "format-charging": "{capacity}% 󰂄",
     "format-plugged": "{capacity}% ",
     "format-alt": "{time} {icon}",
     // "format-good": "", // An empty format will hide the module

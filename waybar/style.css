@@ -121,6 +121,18 @@ button:hover {
   border-radius: 10px;
 }
 
+#custom-prayerbar {
+  padding: 0 10px;
+  color: @pine;
+  background: @base;
+  border: 3px solid @surface;
+  border-left: none;
+  border-radius: 0px 10px 10px 0px;
+  margin: 5px;
+  margin-right: 0.3rem;
+  margin-left: 0;
+}
+
 #workspaces button.active {
   color: @foam;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.818);
@@ -129,16 +141,16 @@ button:hover {
 }
 
 #workspaces button.urgent {
-  background-color: #eb4d4b;
+  background-color: @love;
 }
 
 #clock {
   color: @gold;
   background: @base;
   border: 3px solid @surface;
-  border-radius: 10px;
+  border-radius: 10px 0px 0px 10px;
   margin: 5px;
-  margin-right: 0.3rem;
+  margin-right: 0;
   margin-left: 10px;
 }
 
@@ -154,8 +166,8 @@ button:hover {
 
 #battery.charging,
 #battery.plugged {
-  color: #ffffff;
-  background-color: #26a65b;
+  color: @text;
+  background-color: @pine;
 }
 
 @keyframes blink {
